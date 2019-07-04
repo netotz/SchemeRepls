@@ -28,3 +28,12 @@
                 (apply min lst) 
             lst))))
 (function 5 4 1)
+
+;; 1.4
+; the conditional statement (is b greater than 0?) will decide 
+; which procedure (+ if true, else -) to be applied to the args (a, b)
+(define (a-plus-abs-b a b) 
+    ((if (> b 0)
+        +
+        -) 
+    a b))
