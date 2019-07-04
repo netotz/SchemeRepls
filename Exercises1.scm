@@ -37,3 +37,12 @@
         +
         -) 
     a b))
+
+;; 1.5
+; (p) is evaluating itself, it is its own definition
+(define (p) (p))
+(define (test x y)
+    (if (= x 0)
+        0
+        y))
+(test 0 (p))
