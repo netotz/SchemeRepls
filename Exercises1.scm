@@ -39,7 +39,10 @@
     a b))
 
 ;; 1.5
-; (p) is evaluating itself, it is its own definition
+; An applicative-order evaluation would never stop because
+; (p) is defined as itself
+; An normal-order would return 0 because
+; it would not have to worry about (p)
 (define (p) (p))
 (define (test x y)
     (if (= x 0)
