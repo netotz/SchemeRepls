@@ -8,12 +8,12 @@
 
     ; true if guessed root is almost the exact root
     (define (isCloseEnough? root)
-        (< (abs (- (newGuess root radicand) root))
+        (<  (abs (- (newGuess root radicand) root))
             0.000001))
 
     ; recalculates the guessed root
     (define (newGuess root)
-        (/ (+ root (/ radicand root) )
+        (/  (+ root (/ radicand root))
             2))
 
     ; decides whether to continue guessing the root or to stop
@@ -24,3 +24,4 @@
     
     ; calls the recursive function with 1 as default guess
     (iterSqrt 1.0))
+(sqrt 21)

@@ -8,12 +8,12 @@
 ; boolean procedure,
 ; evaluates if the guessed root is accurate enough
 (define (isCloseEnough? root radicand)
-    (< (abs (- (newGuess root radicand) root))
+    (<  (abs (- (newGuess root radicand) root))
         0.00001))
 
 ; calculates a new guessed root
 (define (newGuess root radicand)
-    (/ (+ (/ radicand (square root)) (* 2 root)) 
+    (/  (+ (/ radicand (square root)) (* 2 root)) 
         3))
 
 ; recursive procedure,
