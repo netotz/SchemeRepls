@@ -20,5 +20,3 @@
 ; calls the recursive function with 1 as default guess
 (define (sqrt num)
     (iterSqrt 1.0 num))
-
-(sqrt 21)
