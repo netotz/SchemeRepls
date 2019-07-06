@@ -14,3 +14,6 @@ as needed. |#
 ; becomes jammed in very large numbers like this:
 (sqrt 82345678912)
 
+; When changed the 'isCloseEnough?' (see 'NewtonsSqrt.scm' for ref)
+; to check if the next guess is almost the same as the actual guess
+; the calculations for small radicands now are accurate.

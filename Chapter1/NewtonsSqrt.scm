@@ -5,7 +5,11 @@
 ; boolean procedure
 ; true if guessed root is almost the exact root
 (define (isCloseEnough? root radicand)
-    (< (abs (- (square root) radicand)) 0.00001))
+    ; checks difference between root^2 and actual radicand
+    ; (< (abs (- (square root) radicand)) 0.00001)
+
+    ; checks if the next guess is almost the same as the actual guess
+    (< (abs (- (newGuess root radicand) root)) 0.000001))
 
 ; recalculates the guessed root
 (define (newGuess root radicand)
