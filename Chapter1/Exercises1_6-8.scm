@@ -11,9 +11,9 @@ as needed. |#
 (sqrt 0.0006)
 
 ; For large numbers the functions is still accurate, but 
-; becomes jammed in very large numbers like this:
+; gets stucked in very large numbers like this:
 (sqrt 82345678912)
 
-; When changed the 'isCloseEnough?' (see 'NewtonsSqrt.scm' for ref)
-; to check if the next guess is almost the same as the actual guess
-; the calculations for small radicands now are accurate.
+; When changed the 'isCloseEnough?' (see 'NewtonsSqrt.scm' for ref),
+; the calculations for small radicands are now accurate,
+; and for larger ones the function doesn't get stucked anymore.
