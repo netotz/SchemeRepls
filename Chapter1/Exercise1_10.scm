@@ -28,6 +28,5 @@
     (Ack 0 4)
     8
 
-<<<<<<< HEAD
 (define (h x) (Ack 2 x)) ; = (tetration x 2) = 2 ↑↑ x = 2 [4] x
 (define (k x) (* 5 x x)) ; = 5x**2
