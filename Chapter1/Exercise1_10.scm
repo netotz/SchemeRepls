@@ -15,7 +15,7 @@
 ; [n]   Hyperoperation sequence
 
 (define (f x) (Ack 0 x)) ; = 2x
-(define (g x) (Ack 1 x) ; = 2**x = 2 ↑ x = 2 [2] x
+(define (g x) (Ack 1 x) ; = 2**x = 2 ↑ x = 2 [3] x
 
     ; Ack = 2n if m = 0, and Ack = 2 when n = 1
     ; x has a decrement of 1 each call
