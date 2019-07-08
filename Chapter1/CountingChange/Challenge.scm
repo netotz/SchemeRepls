@@ -8,7 +8,7 @@
     (cond ((or (= amount 0) (= currency 0)) 1)
             ; (= currency 0) only works if the vector is sorted ascending,
             ; meaning the smallest currency must be vector's 0 index
-          ((or (< amount 0) (< currency 0)) 0)
+          ((< amount 0) 0)
           (else (+ (countChange amount (- currency 1))
                    (countChange (- amount (vector-ref denominations currency))
                                 currency)))))
