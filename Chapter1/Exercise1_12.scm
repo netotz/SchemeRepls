@@ -11,9 +11,14 @@
 
 ; makes a vector of the nth Pascal row
 (define (pascal n)
+    ; local vector
     (let ((row (make-vector n 0)))
+        ; local procedure, works as a loop
         (let next ((i 0))
             (if (= i n)
+                ; when loop ends
                 row
-                (begin (vector-set! row i (element n (+ i 1)))
-                (next (+ i 1)))))))
+                ; else
+                (begin  (vector-set! row i (element n (+ i 1)))
+                        ; next iteration
+                        (next (+ i 1)))))))
