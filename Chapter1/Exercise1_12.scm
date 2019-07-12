@@ -16,7 +16,7 @@
         ; local procedure, works as a loop
         (let next ((i 0))
             (if (= i n)
-                ; when loop ends
+                ; when loop ends return the vector
                 row
                 ; else
                 (begin  (vector-set! row i (element n (+ i 1)))
