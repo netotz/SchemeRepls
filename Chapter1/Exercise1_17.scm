@@ -7,18 +7,19 @@
         0
         (+ a (multiplyBook a (- b 1)))))
 
+; iterative process
 (define (multiplyIter a b n)
     (if (= n 1)
         b
         (multiplyIter a (+ b a) (- n 1))))
-(define (multiply a b)
-    (multiplyIter a a b))
 
+; included methods
 (define (double int)
     (+ int int))
 (define (halve int)
     (/ int 2))
 
+; multiplication procedure analogous to fast-expt
 (define (fastMultIter a b n)
     (cond ((= n 1)
             b)
@@ -26,3 +27,5 @@
             (fastMultIter a (double b) (halve n)))
         (else
             (fastMultIter a (+ b a) (- n 1)))))
+(define (multiply a b)
+    (fastMultIter a a b))
