@@ -11,3 +11,18 @@
     (if (= n 1)
         b
         (multiplyIter a (+ b a) (- n 1))))
+(define (multiply a b)
+    (multiplyIter a a b))
+
+(define (double int)
+    (+ int int))
+(define (halve int)
+    (/ int 2))
+
+(define (fastMultIter a b n)
+    (cond ((= n 1)
+            b)
+        ((even? n)
+            (fastMultIter a (double b) (halve n)))
+        (else
+            (fastMultIter a (+ b a) (- n 1)))))
