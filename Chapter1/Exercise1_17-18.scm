@@ -8,6 +8,7 @@
         (+ a (multiplyBook a (- b 1)))))
 
 ; iterative process
+; used for 1.18
 (define (multiplyIter a b n)
     (if (= n 1)
         b
