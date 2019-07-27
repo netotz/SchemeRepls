@@ -1,4 +1,4 @@
-;; 1.17
+;; 1.17 , 1.18
 ;; integer multiplication by means of repeated addition
 
 ; book's method
@@ -20,6 +20,7 @@
     (/ int 2))
 
 ; multiplication procedure analogous to fast-expt
+;; also answer for exercise 1.18
 (define (fastMultIter a b n)
     (cond ((= n 1)
             b)
